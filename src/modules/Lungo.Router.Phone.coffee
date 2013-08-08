@@ -39,7 +39,7 @@ Lungo.RouterPhone = do (lng = Lungo) ->
   @method   back
   ###
   back = ->
-    return false if _animating
+    #return false if _animating
     do _removeLast
     current = lng.Element.Cache.section
     query = C.ELEMENT.SECTION + HASHTAG + history()
