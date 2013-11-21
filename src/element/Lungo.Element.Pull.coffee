@@ -85,7 +85,7 @@ Lungo.Element.Pull = (element_selector, config_data) ->
     STARTED = false
     INI_Y = 0
     ELEMENT.bind("touchstart", (event) ->
-      if ELEMENT[0].scrollTop <= 1
+      if ELEMENT[0].scrollTop <= 1 and !(/^range$/).test(event.target.getAttribute('type'))
         STARTED = true
         INI_Y = _getTouchY event
       true
